@@ -8,13 +8,52 @@
 
 import UIKit
 
-class StudentEntryViewController: UIViewController {
-
+class StudentEntryViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return studentArray.count
+    }
+    
+    
+    
+    var studentArray:[Student] = []
+    @IBOutlet weak var StudentEntryViewController : UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        StudentEntryViewController?.delegate = self
+        StudentEntryViewController?.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
+    
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      return
+    }
+    func loadStudentData()
+    {
+        
+    }
+    
+    
+    @IBOutlet weak var Studentid: UITextField!
+    
+    @IBOutlet weak var StudentName: UITextField!
+    
+    
+    @IBOutlet weak var StudentGender: UITextField!
+    
+    @IBOutlet weak var Corse: UITextField!
+    
+    @IBOutlet weak var email: UITextField!
+    
+    @IBOutlet weak var BirthDate: UIDatePicker!
+    
+    @IBOutlet weak var percentage: UITextField!
+    
+    
+    @IBOutlet weak var Grade: UITextField!
+    
+   
+    
     
 
     /*

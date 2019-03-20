@@ -46,11 +46,28 @@ class LoginViewController: UIViewController {
                 userDefault.removeObject(forKey: "userEmail")
                  userDefault.removeObject(forKey: "userPassword")
             }
-            let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController(WithIdentifier : "StudentEntryViewController") as! StudentEntryViewController
-            self.present Home VC
+            let StudentVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController(WithIdentifier :"StudentEntryViewController") as! StudentEntryViewController
+            self.navigationController?.pushViewController(StudentVC, animated: true)
+            //self.present(StudentVC , animated: true)
+        }else{
+            self.showAlert(meassage: "User/Password Invalid")
+            
         }
+    
+        
+        }
+    func showAlert(meassage:String)
+    {
+        let alert = UIAlertController(title: "Alert", message: meassage, preferredStyle: .alert)
+        let actionDefault = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(actionDefault)
+        self.present(alert, animated: true)
+    
+        
+        
+    }
         
     }
     
-}
+
 
