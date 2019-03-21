@@ -13,9 +13,9 @@ class StudentEntryViewController: UIViewController ,UITableViewDataSource, UITab
         return studentArray.count
     }
     
+     var studentArray : [Student]!
     
-    
-    var studentArray:[Student] = []
+  
     @IBOutlet weak var StudentEntryViewController : UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,9 @@ class StudentEntryViewController: UIViewController ,UITableViewDataSource, UITab
     }
     
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell") as! StudentTableViewCell
+    _ = studentArray[indexPath.row]
+    return cell
     }
     func loadStudentData()
     {
