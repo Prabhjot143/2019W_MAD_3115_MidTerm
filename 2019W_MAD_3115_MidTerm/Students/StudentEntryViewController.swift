@@ -26,7 +26,6 @@ class StudentEntryViewController: UIViewController ,UITableViewDataSource, UITab
     }
     
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      return
     }
     func loadStudentData()
     {

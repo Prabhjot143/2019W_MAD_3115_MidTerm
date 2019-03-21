@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
                 userDefault.removeObject(forKey: "userEmail")
                  userDefault.removeObject(forKey: "userPassword")
             }
-            let StudentVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController(WithIdentifier :"StudentEntryViewController") as! StudentEntryViewController
+            let StudentVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController(WithIdentifier :"StudentEntryViewController") as! StudentEntryViewController;
             self.navigationController?.pushViewController(StudentVC, animated: true)
             //self.present(StudentVC , animated: true)
         }else{
