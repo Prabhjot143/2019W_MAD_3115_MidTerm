@@ -12,7 +12,7 @@ struct Student {
     var StudentName : String
     var CourseName : String
     var StudentEmailAddress : String
-   // var studentBirthDate : String
+    var studentBirthDate : String
     var StudentPercentage : Float
     var StudentGrade : String
 }

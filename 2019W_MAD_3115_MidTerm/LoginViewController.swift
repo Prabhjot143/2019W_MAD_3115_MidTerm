@@ -33,7 +33,8 @@ class LoginViewController: UIViewController {
     @IBAction func loginBtn(_ sender: Any) {
         let email = emailtxt.text
         let password = pwdtxt.text
-        if(email == "Admin@123" && password == "Admin")
+        
+        if(email == "admin" && password == "admin123")
         {
              let userDefault = UserDefaults.standard
             if RememberMe.isOn
@@ -46,6 +47,7 @@ class LoginViewController: UIViewController {
                 userDefault.removeObject(forKey: "userEmail")
                  userDefault.removeObject(forKey: "userPassword")
             }
+            
             
             let StudentVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StudentEntryViewController") as! StudentEntryViewController
             //self.navigationController?.pushViewController(StudentVC, animated: true)
